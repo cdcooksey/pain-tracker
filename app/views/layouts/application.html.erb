@@ -2,6 +2,10 @@
 <html>
   <head>
     <title>PainTracker</title>
+    <% if content_for? :head %>
+        <%= yield :head %>
+    <% end %>
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
