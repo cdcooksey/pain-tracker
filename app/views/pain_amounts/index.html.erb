@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pain Amounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Strength</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pain_amounts.each do |pain_amount| %>
+      <tr>
+        <td><%= pain_amount.strength %></td>
+        <td><%= link_to 'Show', pain_amount %></td>
+        <td><%= link_to 'Edit', edit_pain_amount_path(pain_amount) %></td>
+        <td><%= link_to 'Destroy', pain_amount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pain Amount', new_pain_amount_path %>
