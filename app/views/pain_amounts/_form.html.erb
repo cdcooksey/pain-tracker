@@ -1,22 +1,3 @@
-<%= form_with(model: pain_amount, local: true) do |form| %>
-  <% if pain_amount.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(pain_amount.errors.count, "error") %> prohibited this pain_amount from being saved:</h2>
-
-      <ul>
-      <% pain_amount.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :strength %>
-    <%= form.number_field :strength %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<% content_for :head do -%>
+  <%= javascript_pack_tag 'pain_amounts' %>
 <% end %>
