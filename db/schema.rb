@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_30_032231) do
+ActiveRecord::Schema.define(version: 2018_10_03_181320) do
 
   create_table "pain_amounts", force: :cascade do |t|
-    t.integer "strength", default: 0, null: false
+    t.integer "amount", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "label"
   end
 
 end
